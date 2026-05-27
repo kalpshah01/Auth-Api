@@ -1,0 +1,158 @@
+/* Login Component Styles */
+
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 20px;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 450px;
+}
+
+.login-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideInUp 0.5s ease-out;
+  border-top: 4px solid #d4af37;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-wrapper h2 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.login-wrapper form input {
+  padding: 12px 14px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.login-wrapper form input:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.login-wrapper form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1a1a1a;
+  color: #d4af37;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.login-wrapper form button:hover {
+  background: #2d2d2d;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login-links p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+.login-links a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.login-error {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border-left: 4px solid #c33;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper form {
+    padding: 30px 20px;
+    gap: 14px;
+  }
+
+  .login-wrapper h2 {
+    font-size: 22px;
+  }
+
+  .login-wrapper form input,
+  .login-wrapper form button {
+    font-size: 15px;
+    padding: 11px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-wrapper form {
+    padding: 24px 16px;
+    gap: 12px;
+  }
+
+  .login-wrapper h2 {
+    font-size: 20px;
+  }
+
+  .login-wrapper form input,
+  .login-wrapper form button {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+
+  .login-links p,
+  .login-links a {
+    font-size: 13px;
+  }
+}
